@@ -15,7 +15,7 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
+PROJECT_DIR = os.path.dirname(__file__)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'main_app'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -70,7 +71,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'first_variant.wsgi.application'
 
-
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
