@@ -37,7 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main_app'
+    'main_app',
+    'djangobower'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -50,6 +51,24 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
 )
+THIRD_PARTY_APPS = (
+    'djangobower',
+    'django_nvd3'
+)
+
+BOWER_INSTALLED_APPS = (
+    'jquery#1.9',
+    'underscore',
+)
+
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    # 'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    'djangobower.finders.BowerFinder',
+)
+
 
 ROOT_URLCONF = 'first_variant.urls'
 
@@ -101,3 +120,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+C_URL = '/static/'
+
+APPLICATION_DIR = os.path.dirname(globals()['__file__']) + '/../'
+
+BOWER_COMPONENTS_ROOT = os.path.join(APPLICATION_DIR, 'components')
+
+BOWER_PATH = '/usr/local/bin/bower'
+
+
+
+BOWER_INSTALLED_APPS += (
+    'd3#3.3.13',
+    'nvd3#1.7.1',
+)
