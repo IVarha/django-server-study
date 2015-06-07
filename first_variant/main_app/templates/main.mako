@@ -29,20 +29,12 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
 
-<section id="main_content" class="inner">
-<select>
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="opel">Opel</option>
-  <option value="audi">Audi</option>
-</select>
 
-</section>
 
 <section id="main_content1" class="inner">
 <select>
     {% for name in foo %}
-        <option value="volvo">{{name}}</option>
+        <option >{{name}}</option>
     {% endfor %}
 </select>
 
