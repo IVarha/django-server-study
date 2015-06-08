@@ -135,4 +135,5 @@ BOWER_PATH = '/usr/local/bin/bower'
 BOWER_INSTALLED_APPS += (
     'd3#3.3.13',
     'nvd3#1.7.1',
+    'bootstrap-select'
 )
